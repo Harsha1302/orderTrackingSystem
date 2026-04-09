@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: order-tracking-system
+    env: node
+    buildCommand: npm run build
+    startCommand: npm start
+    disk:
+      name: sqlite-data
+      mountPath: /opt/render/project/src/backend/data
+      sizeGB: 1
